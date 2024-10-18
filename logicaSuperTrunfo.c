@@ -1,96 +1,72 @@
 #include <stdio.h>
-#include <string.h>
+  int main() {
+    
+    
+    char estado, estadob [50];
+    int codigo, codigob;
+    char nome, nomeb[50];
+    int populacaoA, populacaoB;
+    float area, areab;
+    float PIB, PIBb;
+    int pontos_turisticos, pontos_turisticosb;
+    printf("Desafio Super Trunfo - Países\n");
+    printf("Digite o estado\n");
+    scanf("%s", &estado);
+    printf("Digite o estado2\n");
+    scanf("%s", &estadob);
+    printf("Digite o Codigo\n");
+    scanf("%d", &codigo);
+    printf("Digite o Codigo2\n");
+    scanf("%d", &codigob);
+    printf("Digite o nome\n");
+    scanf("%s",&nome);
+    printf("Digite o nome2\n");
+    scanf("%s",&nomeb);
+    printf("Digite a Populacao\n");
+    scanf("%d", &populacaoA);
+    printf("Digite a Populacao2\n");
+    scanf("%d", &populacaoB);
+    printf("Digite a area\n");
+    scanf("%f", &area);
+    printf("Digite a area2\n");
+    scanf("%f", &areab);
+    printf("Digite o PIB\n");
+    scanf("%f", &PIB);
+    printf("Digite o PIB2\n");
+    scanf("%f", &PIBb);
+    printf("Digite os pontos turisticos\n");
+    scanf("%d", &pontos_turisticos);
+    printf("Digite os pontos turisticos2\n");
+    scanf("%d", &pontos_turisticosb);
+    printf("Dados cadastrados com sucesso\n");
+   
+   
+   if (populacaoA > populacaoB)
+   
+   {
+    printf("Cidade 1 tem populacao maior que cidade 2\n");
+   }
+   
+    
+   
 
-#define MAX_CIDADES 100
+    // Comparação de Cartas:
+    // Desenvolva a lógica de comparação entre duas cartas.
+    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-typedef struct {
-    char estado[50];
-    int codigo;
-    char nome[50];
-    int populacao;
-    float area;
-    float pib;
-    int pontos_turisticos;
-} CartaCidade;
+    // Exemplo:
+    // if (populacaoA > populacaoB) {
+    //     printf("Cidade 1 tem maior população.\n");
+    // } else {
+    //     printf("Cidade 2 tem maior população.\n");
+    // }
 
-void cadastrarCarta(CartaCidade *carta) {
-    printf("Cadastro da Carta:\n");
-    printf("Estado: ");
-    scanf("%s", carta->estado);
-    printf("Código: ");
-    scanf("%d", &carta->codigo);
-    printf("Nome da Cidade: ");
-    scanf("%s", carta->nome);
-    printf("População: ");
-    scanf("%d", &carta->populacao);
-    printf("Área (em km²): ");
-    scanf("%f", &carta->area);
-    printf("PIB (em milhões): ");
-    scanf("%f", &carta->pib);
-    printf("Número de Pontos Turísticos: ");
-    scanf("%d", &carta->pontos_turisticos);
-    printf("Carta cadastrada com sucesso!\n\n");
-}
+    // Exibição dos Resultados:
+    // Após realizar as comparações, exiba os resultados para o usuário.
+    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
-void compararCartas(CartaCidade *carta1, CartaCidade *carta2, int criterio) {
-    printf("Comparando cartas de %s e %s:\n", carta1->nome, carta2->nome);
-    switch (criterio) {
-        case 1: // População
-            if (carta1->populacao > carta2->populacao) {
-                printf("%s vence!\n", carta1->nome);
-            } else {
-                printf("%s vence!\n", carta2->nome);
-            }
-            break;
-        case 2: // Área
-            if (carta1->area > carta2->area) {
-                printf("%s vence!\n", carta1->nome);
-            } else {
-                printf("%s vence!\n", carta2->nome);
-            }
-            break;
-        case 3: // PIB
-            if (carta1->pib > carta2->pib) {
-                printf("%s vence!\n", carta1->nome);
-            } else {
-                printf("%s vence!\n", carta2->nome);
-            }
-            break;
-        case 4: // Densidade Populacional
-            // Densidade = População / Área
-            float densidade1 = carta1->populacao / carta1->area;
-            float densidade2 = carta2->populacao / carta2->area;
-            if (densidade1 < densidade2) {
-                printf("%s vence!\n", carta1->nome);
-            } else {
-                printf("%s vence!\n", carta2->nome);
-            }
-            break;
-        default:
-            printf("Critério inválido!\n");
-            break;
-    }
-}
-
-int main() {
-    CartaCidade cartas[MAX_CIDADES];
-    int totalCartas = 0;
-
-    // Cadastrar duas cartas
-    for (int i = 0; i < 2; i++) {
-        cadastrarCarta(&cartas[totalCartas]);
-        totalCartas++;
-    }
-
-    // Escolher critério de comparação
-    int criterio;
-    printf("Escolha o critério de comparação:\n");
-    printf("1. População\n2. Área\n3. PIB\n4. Densidade Populacional\n");
-    printf("Digite o número do critério: ");
-    scanf("%d", &criterio);
-
-    // Comparar as cartas cadastradas
-    compararCartas(&cartas[0], &cartas[1], criterio);
+    // Exemplo:
+    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
 }
