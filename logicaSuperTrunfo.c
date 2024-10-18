@@ -1,25 +1,30 @@
 #include <stdio.h>
-
-  
-// Tema 2 - Comparação das Cartas
-// Siga os comentários para implementar cada parte do desafio.
-
-int main() {
-    printf("Super Trunfo - Países\n");
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
+  int main() {
+    char estado [50];
+    int codigo;
+    char nome [50];
+    int populacao;
+    float area;
+    float PIB;
+    int pontos_turisticos;
+    printf("Desafio Super Trunfo - Países\n");
+    printf("Digite o estado\n");
+    scanf("%s", &estado);
+    printf("Digite o Codigo\n");
+    scanf("%d", &codigo);
+    printf("Digite o nome\n");
+    scanf("%s",&nome);
+    printf("Digite a Populacao\n");
+    scanf("%d", &populacao);
+    printf("Digite a area\n");
+    scanf("%f", &area);
+    printf("Digite o PIB\n");
+    scanf("%f", &PIB);
+    printf("Digite os pontos turisticos\n");
+    scanf("%d", &pontos_turisticos);
+    printf("Dados cadastrados com sucesso\n");
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+   
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
