@@ -1,53 +1,42 @@
 #include <stdio.h>
   int main() {
     
+     char estado[50];
+    int codigo;
+    char nome[50];
+    int populacao;
+    float area;
+    float PIB;
+    int pontos_turisticos;
     
-    char estado, estadob [50];
-    int codigo, codigob;
-    char nome, nomeb[50];
-    int populacaoA, populacaoB;
-    float area, areab;
-    float PIB, PIBb;
-    int pontos_turisticos, pontos_turisticosb;
     printf("Desafio Super Trunfo - Países\n");
     printf("Digite o estado\n");
     scanf("%s", &estado);
-    printf("Digite o estado2\n");
-    scanf("%s", &estadob);
     printf("Digite o Codigo\n");
     scanf("%d", &codigo);
-    printf("Digite o Codigo2\n");
-    scanf("%d", &codigob);
     printf("Digite o nome\n");
     scanf("%s",&nome);
-    printf("Digite o nome2\n");
-    scanf("%s",&nomeb);
     printf("Digite a Populacao\n");
-    scanf("%d", &populacaoA);
-    printf("Digite a Populacao2\n");
-    scanf("%d", &populacaoB);
+    scanf("%d", &populacao);
     printf("Digite a area\n");
     scanf("%f", &area);
-    printf("Digite a area2\n");
-    scanf("%f", &areab);
     printf("Digite o PIB\n");
     scanf("%f", &PIB);
-    printf("Digite o PIB2\n");
-    scanf("%f", &PIBb);
     printf("Digite os pontos turisticos\n");
     scanf("%d", &pontos_turisticos);
-    printf("Digite os pontos turisticos2\n");
-    scanf("%d", &pontos_turisticosb);
     printf("Dados cadastrados com sucesso\n");
+    //comparação entre duas cartas
+    int populaçãoA = 300000;
+    int populaçãoB = 400000;
+    if (populaçãoA > populaçãoB)
+    {
+      printf("A população A e maior que a população B");
+    }
+    else{
+      printf("A população B e maior que população A");
+    }
+
    
-   
-   if (populacaoA > populacaoB)
-   
-   {
-    printf("Cidade 1 tem populacao maior que cidade 2\n");
-   }
-   
-    
    
 
     // Comparação de Cartas:
@@ -67,6 +56,6 @@
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+    }
     return 0;
 }
