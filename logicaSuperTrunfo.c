@@ -1,7 +1,7 @@
 #include <stdio.h>
   int main() {
     
-     char estado[50];
+    char estado[50];
     int codigo;
     char nome[50];
     int populacao;
@@ -30,10 +30,10 @@
     int populaçãoB = 400000;
     if (populaçãoA > populaçãoB)
     {
-      printf("A população A e maior que a população B");
+      printf("A população A e maior que a população B\n");
     }
     else{
-      printf("A população B e maior que população A");
+      printf("A população B e maior que população A\n");
     }
 
    
